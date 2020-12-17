@@ -27,7 +27,7 @@ reg [7:0] green = 00000111;
 reg [7:0] blue = 00011100;
 reg start = 1;
 
-reg ready = 1;
+reg ready = 0;
 wire A0_valid, B0_valid, A1_valid, B1_valid, A2_valid, B2_valid;
 
 wire [31:0] A0_red, B0_multiply, A1_green, B1_multiply, A2_blue, B2_multiply;

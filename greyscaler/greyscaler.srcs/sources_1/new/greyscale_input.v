@@ -65,6 +65,13 @@ initial begin
     B1_multiply <= 32'b00111111000110011001100110011010; //green multiplier = 0.6, IEE 754 representation
     B2_multiply <= 32'b00111101110011001100110011001101; //blue multiplier = 0.1, IEE 754 representation
     fsm_state <= 0;
+    
+    A0_valid <= 0;//AXI protocol: deassert t_valid
+    A1_valid <= 0;
+    A2_valid <= 0;  
+    B0_valid <= 0;
+    B1_valid <= 0;
+    B2_valid <= 0;
 end    
     
 
@@ -101,13 +108,7 @@ always@(posedge clk) begin
             B1_valid <= 1;
             B2_valid <= 1;
             
-            fsm_state <= s3_timer;
-            timer <= 1; //the greyscale algorithm should take 3 clocks to process    
-        end
-        
-        s3_timer: begin //counts three clocks, then sends back to s0_idle where valid will be deasserted
-            fsm_state <= (timer == 0) ? s0_idle : s3_timer;
-            timer <= (timer == 0) ? 0:(timer - 1);
+            fsm_state <= (A0_ready & B0_ready & A1_ready & B1_ready & A2_ready & B2_ready) ? s2_send:s0_idle;//maintain data until slave no longer needs it
         end
     endcase  
 end 
