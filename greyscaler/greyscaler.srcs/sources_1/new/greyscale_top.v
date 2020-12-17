@@ -79,7 +79,7 @@ greyscale_algorithm MODULE_COMPUTE(
 .S_AXIS_B_2_tdata(B2_multiply),
 .S_AXIS_B_2_tready(B2_ready),
 .S_AXIS_B_2_tvalid(B2_valid),
-.alck_0(clk)
+.aclk_0(clk)
 );    
 
 greyscale_output MODULE_OUTPUT(

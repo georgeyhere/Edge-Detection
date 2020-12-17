@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/George/Edge-Detection/greyscaler/greyscaler.ip_user_files/bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_0_0/sim/greyscale_algorithm_floating_point_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'greyscale_algorithm_floating_point_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/George/Edge-Detection/greyscaler/greyscaler.ip_user_files/bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_1_0/sim/greyscale_algorithm_floating_point_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'greyscale_algorithm_floating_point_1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/George/Edge-Detection/greyscaler/greyscaler.ip_user_files/bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_2_0/sim/greyscale_algorithm_floating_point_2_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'greyscale_algorithm_floating_point_2_0'
