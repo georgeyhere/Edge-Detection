@@ -1,0 +1,7 @@
+Running: xsim.dir/greyscale_input_behav/xsimk.exe -simmode gui -wdb greyscale_input_behav.wdb -simrunnum 0 -socket 49413
+Design successfully loaded
+Design Loading Memory Usage: 5888 KB (Peak: 5888 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 6556 KB (Peak: 6556 KB)
+Simulation CPU Usage: 62 ms

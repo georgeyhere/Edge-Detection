@@ -12,8 +12,8 @@ module config_SCCB
 )
 (
 input clk,
-input wire [7:0] address,//address of device control register
-input wire [7:0] data,//device control register value (one byte)
+input wire [7:0] address, //address of device control register
+input wire [7:0] data, //device control register value (one byte)
 input start,
 
 output reg ready,
@@ -37,16 +37,15 @@ localparam s11_end_4 = 11;
 
 localparam camera_address = 8'h42; //address of the camera, sent in phase 1, from datasheet
     
-reg [7:0] queue = 0;//the byte that currently is being sent
-reg [1:0] byte_count = 0;//counter that stores number of bytes sent in current transmission
-reg [7:0] bit_counter = 0;//counts number of bits sent in current transmission phase    
-reg [3:0] FSM_state = s1_idle;//FSM state
-reg [3:0] FSM_return_state;//stores FSM return state for timer function
-reg [31:0] local_timer = 0;//register for timer, stores # of clock counts
+reg [7:0] queue = 0; //the byte that currently is being sent
+reg [1:0] byte_count = 0; //counter that stores number of bytes sent in current transmission
+reg [7:0] bit_counter = 0; //counts number of bits sent in current transmission phase    
+reg [3:0] FSM_state = s1_idle; //FSM state
+reg [3:0] FSM_return_state; //stores FSM return state for timer function
+reg [31:0] local_timer = 0; //register for timer, stores # of clock counts
 
 
-initial begin
-//both SCCB_C and SCCB_D are initialized to logic 1, and should be held there at idle
+initial begin //both SCCB_C and SCCB_D are initialized to logic 1, and should be held there at idle
     SCCB_C = 1; 
     SCCB_D = 1;
     ready = 1;
@@ -100,15 +99,15 @@ case(FSM_state)
     //in SCCB communication, transactions on SCCB_D can only occur when SCCB_C is brought low
         SCCB_C <= 0; //bring SCCB_C low 
         FSM_state <= s0_timer;
-        local_timer <=  8;//t(AA) = 400ns = 10 clock periods - 2 clock periods
+        local_timer <=  8; //t(AA) = 400ns = 10 clock periods - 2 clock periods
         FSM_return_state <= s5_send_2;
     end
     
     s5_send_2: begin //now that SCCB_C is low , we can assign data bit to SCCB_D
         SCCB_D <= queue[7]; //transmit the first bit of the data
-        bit_counter <= bit_counter + 1;//increment bit counter
+        bit_counter <= bit_counter + 1; //increment bit counter
         FSM_state <= s0_timer;
-        local_timer <= 3;//t(SU:DAT) = 120ns = 3 clock periods
+        local_timer <= 3; //t(SU:DAT) = 120ns = 3 clock periods
         FSM_return_state <= s6_send_3;
     end
     
@@ -126,7 +125,7 @@ case(FSM_state)
     
         default: begin //not all bits have been sent
         FSM_state <= s4_send_1; 
-        queue <= queue<<1;//advance the queue of bits to be sent
+        queue <= queue<<1; //advance the queue of bits to be sent
         end
         
         8: begin //all 8 bits (w/ don't care) have been sent
@@ -147,19 +146,19 @@ case(FSM_state)
         SCCB_D <= 0;
         FSM_state <= s0_timer;
         FSM_return_state <= s10_end_3;
-        local_timer <= 3;//t(SU:DAT) = 120 ns
+        local_timer <= 3; //t(SU:DAT) = 120 ns
     end
     
     s10_end_3: begin
         SCCB_C <= 1;
         FSM_state <= s0_timer;
         FSM_return_state <= s11_end_4;
-        local_timer <= 15;//t(SU:STO) = 600ns = 15 clock periods
+        local_timer <= 15; //t(SU:STO) = 600ns = 15 clock periods
     end
     
     s11_end_4: begin
-        SCCB_D <= 1;//bring SCCB_D back to its idle state of 1
-        ready <= 1;//ready for next transmission
+        SCCB_D <= 1; //bring SCCB_D back to its idle state of 1
+        ready <= 1; //ready for next transmission
         FSM_state <= s1_idle;    
     end    
         
