@@ -1,0 +1,11 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "name": "greyscale_algorithm",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2"
+    },
+    "design_tree": {}
+  }
+}
