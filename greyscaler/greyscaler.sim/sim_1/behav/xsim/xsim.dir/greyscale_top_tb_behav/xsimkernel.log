@@ -2,3 +2,6 @@ Running: xsim.dir/greyscale_top_tb_behav/xsimk.exe -simmode gui -wdb greyscale_t
 Design successfully loaded
 Design Loading Memory Usage: 10448 KB (Peak: 10448 KB)
 Design Loading CPU Usage: 62 ms
+Simulation completed
+Simulation Memory Usage: 12416 KB (Peak: 12416 KB)
+Simulation CPU Usage: 62 ms

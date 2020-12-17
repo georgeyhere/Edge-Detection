@@ -81,7 +81,7 @@ always@(posedge clk) begin
             B1_valid <= 0;
             B2_valid <= 0;
             
-            fsm_state <= (start) ? s1_assign : s0_idle;
+            fsm_state <= (start & A0_ready & B0_ready & A1_ready & B1_ready & A2_ready & B2_ready) ? s1_assign : s0_idle;
         end
         
         s1_assign: begin
