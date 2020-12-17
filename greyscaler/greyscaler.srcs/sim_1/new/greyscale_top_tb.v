@@ -20,7 +20,25 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module greyscale_top_tb(
+module greyscale_top_tb();
+reg clk = 0;
+reg start = 1;
+reg [7:0] red = 00011100;
+reg [7:0] green = 00000111;
+reg [7:0] blue = 00011100;
+wire write_enable;
+wire [5:0] write_address;
+wire [7:0] greyscale_pixel;
 
-    );
+greyscale_top UUT(
+.clk(clk),
+.start(start),
+.red(red),
+.green(green),
+.blue(blue),
+.write_enable(write_enable),
+.write_address(write_address),
+.greyscale_pixel(greyscale_pixel)
+);
+    
 endmodule
