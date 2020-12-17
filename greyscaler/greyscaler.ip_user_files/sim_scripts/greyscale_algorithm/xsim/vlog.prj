@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../bd/greyscale_algorithm/sim/greyscale_algorithm.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
