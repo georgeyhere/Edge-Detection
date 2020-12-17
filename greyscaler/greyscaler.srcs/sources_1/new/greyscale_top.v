@@ -30,7 +30,11 @@ output reg write_enable,
 output reg [5:0]  write_address,
 output reg [7:0] greyscale_pixel
     );
- 
+
+wire A0_ready, A1_ready, A2_ready, B0_ready, B1_ready, B2_ready, M_AXIS_RESULT_0_tready;
+wire A0_valid, A1_valid, A2_valid, B0_valid, B1_valid, B2_valid, M_AXIS_RESULT_0_tvalid;
+wire [31:0] A0_red, A1_green, A2_blue, B0_multiply, B1_multiply, B2_multiply, M_AXIS_RESULT_0_tdata;
+
 greyscale_input MODULE_INPUT(
 .clk(clk),
 .red(red),

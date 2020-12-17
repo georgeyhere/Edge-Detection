@@ -30,11 +30,3 @@ INFO: [VRFC 10-2458] undeclared symbol M_AXIS_RESULT_0_tvalid, assumed default n
 INFO: [VRFC 10-2458] undeclared symbol M_AXIS_RESULT_0_valid, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:89]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sim_1/new/greyscale_top_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module greyscale_top_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/George/Edge-Detection/greyscaler/greyscaler.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/George/Edge-Detection/greyscaler/greyscaler.ip_user_files/bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_0_0/sim/greyscale_algorithm_floating_point_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'greyscale_algorithm_floating_point_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/George/Edge-Detection/greyscaler/greyscaler.ip_user_files/bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_1_0/sim/greyscale_algorithm_floating_point_1_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'greyscale_algorithm_floating_point_1_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/George/Edge-Detection/greyscaler/greyscaler.ip_user_files/bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_2_0/sim/greyscale_algorithm_floating_point_2_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'greyscale_algorithm_floating_point_2_0'

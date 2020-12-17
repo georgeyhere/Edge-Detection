@@ -4,6 +4,5 @@ Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto db6838a329
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-3180] cannot find port 'alck_0' on this module [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:82]
 ERROR: [VRFC 10-3180] cannot find port 'M_AXIS_RESULT_0_tvalid' on this module [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:89]
 ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
