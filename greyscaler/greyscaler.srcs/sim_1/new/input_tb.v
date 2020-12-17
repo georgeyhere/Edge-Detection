@@ -22,9 +22,9 @@
 
 module input_tb();
 reg clk = 0;
-reg [7:0] red = 00011100;
-reg [7:0] green = 00000111;
-reg [7:0] blue = 00011100;
+reg [7:0] red = 8'b00011100;
+reg [7:0] green = 8'b00000111;
+reg [7:0] blue = 8'b00011100;
 reg start = 1;
 
 reg ready = 0;

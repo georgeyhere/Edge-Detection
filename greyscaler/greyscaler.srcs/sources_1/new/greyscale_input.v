@@ -20,8 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module greyscale_input( //input is converted RGB888. provides both data and mulitplier values to greyscale_algorithm
-
+module greyscale_input( 
+//input is converted RGB888. provides both data and mulitplier values to greyscale_algorithm
 input clk,
 
 input [7:0] red,//input is 8-bit RGB
@@ -56,9 +56,6 @@ reg [31:0] timer;
 
 localparam s0_idle = 0;
 localparam s1_assign = 1;
-localparam s2_send = 2;
-localparam s3_timer = 3;
-
 
 initial begin
     B0_multiply <= 32'b00111110100110011001100110011010; //red multiplier = 0.3, IEE 754 representation
@@ -96,20 +93,16 @@ always@(posedge clk) begin
             A1_green [7:0] = green;
             A2_blue [7:0] = blue;
             
-            fsm_state <= s2_send;
-        end
-        
-        s2_send: begin
-            A0_valid <= 1;//AXI protocol: assert t_valid
+            A0_valid <= 1; //AXI protocol: assert t_valid
             A1_valid <= 1;
             A2_valid <= 1;
         
             B0_valid <= 1;
             B1_valid <= 1;
             B2_valid <= 1;
-            
-            fsm_state <= (A0_ready & B0_ready & A1_ready & B1_ready & A2_ready & B2_ready) ? s2_send:s0_idle;//maintain data until slave no longer needs it
+            fsm_state <= (A0_ready & B0_ready & A1_ready & B1_ready & A2_ready & B2_ready) ? s1_assign :s0_idle;
         end
+        
     endcase  
 end 
 
