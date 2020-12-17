@@ -24,7 +24,7 @@ module greyscale_input(
 //input is converted RGB888. provides both data and mulitplier values to greyscale_algorithm
 input clk,
 
-input [7:0] red,//input is 8-bit RGB
+input [7:0] red, //input is 8-bit RGB
 input [7:0] green,
 input [7:0] blue,
 
@@ -63,7 +63,7 @@ initial begin
     B2_multiply <= 32'b00111101110011001100110011001101; //blue multiplier = 0.1, IEE 754 representation
     fsm_state <= 0;
     
-    A0_valid <= 0;//AXI protocol: deassert t_valid
+    A0_valid <= 0; //AXI protocol: deassert t_valid
     A1_valid <= 0;
     A2_valid <= 0;  
     B0_valid <= 0;
@@ -77,7 +77,7 @@ always@(posedge clk) begin
     case(fsm_state) 
         
         s0_idle: begin
-            A0_valid <= 0;//AXI protocol: deassert t_valid
+            A0_valid <= 0; //AXI protocol: deassert t_valid
             A1_valid <= 0;
             A2_valid <= 0;
         
@@ -85,22 +85,27 @@ always@(posedge clk) begin
             B1_valid <= 0;
             B2_valid <= 0;
             
-            fsm_state <= (start & A0_ready & B0_ready & A1_ready & B1_ready & A2_ready & B2_ready) ? s1_assign : s0_idle;
+            A0_red <= 0; //reset outputs
+            A1_green <= 0;
+            A2_blue <= 0;
+            
+            fsm_state <= (start & A0_ready & B0_ready & A1_ready & B1_ready & A2_ready & B2_ready) ? s1_assign : s0_idle; //only send when slave is ready
         end
         
         s1_assign: begin
-            A0_red [7:0] = red;
+            A0_red [7:0] = red; //assign outputs
             A1_green [7:0] = green;
             A2_blue [7:0] = blue;
             
             A0_valid <= 1; //AXI protocol: assert t_valid
             A1_valid <= 1;
             A2_valid <= 1;
-        
+    
             B0_valid <= 1;
             B1_valid <= 1;
             B2_valid <= 1;
-            fsm_state <= (A0_ready & B0_ready & A1_ready & B1_ready & A2_ready & B2_ready) ? s1_assign :s0_idle;
+            
+            fsm_state <= (A0_ready & B0_ready & A1_ready & B1_ready & A2_ready & B2_ready) ? s1_assign :s0_idle; //return to idle when slave deasserts ready
         end
         
     endcase  
