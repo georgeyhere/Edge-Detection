@@ -109,8 +109,6 @@ always@(posedge clk) begin
             fsm_state <= (timer == 0) ? s0_idle : s3_timer;
             timer <= (timer == 0) ? 0:(timer - 1);
         end
-        
-        
     endcase  
 end 
 
