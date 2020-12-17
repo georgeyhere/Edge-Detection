@@ -26,9 +26,9 @@ input start,
 input [7:0] red,
 input [7:0] green,
 input [7:0] blue,
-output reg write_enable,
-output reg [5:0]  write_address,
-output reg [7:0] greyscale_pixel
+output write_enable,
+output [5:0]  write_address,
+output [7:0] greyscale_pixel
     );
 
 wire A0_ready, A1_ready, A2_ready, B0_ready, B1_ready, B2_ready, M_AXIS_RESULT_0_tready;
@@ -90,7 +90,7 @@ greyscale_output MODULE_OUTPUT(
 .clk(clk),
 .M_AXIS_RESULT_0_tdata(M_AXIS_RESULT_0_tdata),
 .M_AXIS_RESULT_0_tready(M_AXIS_RESULT_0_tready),
-.M_AXIS_RESULT_0_tvalid(M_AXIS_RESULT_0_valid),
+.M_AXIS_RESULT_0_tvalid(M_AXIS_RESULT_0_tvalid),
 .greyscale_pixel(greyscale_pixel),
 .write_address(write_address),
 .write_enable(write_enable)

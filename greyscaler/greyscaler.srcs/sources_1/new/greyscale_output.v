@@ -23,7 +23,7 @@
 module greyscale_output(
 input clk,
 input [31:0] M_AXIS_RESULT_0_tdata,
-input M_AXIS_RESULT_0_valid,
+input M_AXIS_RESULT_0_tvalid,
 output reg M_AXIS_RESULT_0_tready,
 output reg [7:0] greyscale_pixel,
 output reg [5:0] write_address,
@@ -48,7 +48,7 @@ always@(posedge clk) begin
     case(fsm_state)
     
     s0_idle: begin
-        fsm_state <= (M_AXIS_RESULT_0_valid)? s1_write : s0_idle;
+        fsm_state <= (M_AXIS_RESULT_0_tvalid)? s1_write : s0_idle;
     end
     
     s1_write: begin

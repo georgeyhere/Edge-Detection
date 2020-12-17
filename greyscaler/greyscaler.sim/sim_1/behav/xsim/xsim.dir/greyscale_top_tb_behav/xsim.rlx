@@ -1,0 +1,12 @@
+
+{ 
+    crc :  16453271533606835146  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto db6838a329c549418d4ed4792c23d3f1 --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_16 -L floating_point_v7_1_9 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot greyscale_top_tb_behav xil_defaultlib.greyscale_top_tb xil_defaultlib.glbl" , 
+    buildDate : "Nov  6 2019" , 
+    buildTime : "21:57:16" , 
+    linkCmd : "D:\\Xilinx\\Vivado\\2019.2\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/greyscale_top_tb_behav/xsimk.exe\"   \"xsim.dir/greyscale_top_tb_behav/obj/xsim_0.win64.obj\" \"xsim.dir/greyscale_top_tb_behav/obj/xsim_1.win64.obj\" \"xsim.dir/greyscale_top_tb_behav/obj/xsim_2.win64.obj\" \"xsim.dir/greyscale_top_tb_behav/obj/xsim_3.win64.obj\" -L\"D:\\Xilinx\\Vivado\\2019.2\\lib\\win64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

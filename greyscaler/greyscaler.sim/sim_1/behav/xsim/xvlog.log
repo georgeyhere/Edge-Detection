@@ -6,27 +6,5 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/George/Edge-Detection/grey
 INFO: [VRFC 10-311] analyzing module greyscale_output
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module greyscale_top
-INFO: [VRFC 10-2458] undeclared symbol A0_ready, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:40]
-INFO: [VRFC 10-2458] undeclared symbol B0_ready, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:41]
-INFO: [VRFC 10-2458] undeclared symbol A1_ready, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:42]
-INFO: [VRFC 10-2458] undeclared symbol B1_ready, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:43]
-INFO: [VRFC 10-2458] undeclared symbol A2_ready, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:44]
-INFO: [VRFC 10-2458] undeclared symbol B2_ready, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:45]
-INFO: [VRFC 10-2458] undeclared symbol A0_valid, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:46]
-INFO: [VRFC 10-2458] undeclared symbol B0_valid, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:47]
-INFO: [VRFC 10-2458] undeclared symbol A1_valid, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:48]
-INFO: [VRFC 10-2458] undeclared symbol B1_valid, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:49]
-INFO: [VRFC 10-2458] undeclared symbol A2_valid, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:50]
-INFO: [VRFC 10-2458] undeclared symbol B2_valid, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:51]
-INFO: [VRFC 10-2458] undeclared symbol A0_red, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:52]
-INFO: [VRFC 10-2458] undeclared symbol B0_multiply, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:53]
-INFO: [VRFC 10-2458] undeclared symbol A1_green, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:54]
-INFO: [VRFC 10-2458] undeclared symbol B1_multiply, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:55]
-INFO: [VRFC 10-2458] undeclared symbol A2_blue, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:56]
-INFO: [VRFC 10-2458] undeclared symbol B2_multiply, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:57]
-INFO: [VRFC 10-2458] undeclared symbol M_AXIS_RESULT_0_tdata, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:61]
-INFO: [VRFC 10-2458] undeclared symbol M_AXIS_RESULT_0_tready, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:62]
-INFO: [VRFC 10-2458] undeclared symbol M_AXIS_RESULT_0_tvalid, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:63]
-INFO: [VRFC 10-2458] undeclared symbol M_AXIS_RESULT_0_valid, assumed default net type wire [C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v:89]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sim_1/new/greyscale_top_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module greyscale_top_tb

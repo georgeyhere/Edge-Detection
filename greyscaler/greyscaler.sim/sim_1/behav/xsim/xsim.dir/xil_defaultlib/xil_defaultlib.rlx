@@ -9,5 +9,5 @@ C:/Users/George/Edge-Detection/greyscaler/greyscaler.ip_user_files/bd/greyscale_
 C:/Users/George/Edge-Detection/greyscaler/greyscaler.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
 C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sim_1/new/greyscale_top_tb.v,1608237263,verilog,,,,greyscale_top_tb,,,,,,,,
 C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_input.v,1608184681,verilog,,C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_output.v,,greyscale_input,,,,,,,,
-C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_output.v,1608236834,verilog,,C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v,,greyscale_output,,,,,,,,
-C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v,1608237320,verilog,,C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sim_1/new/greyscale_top_tb.v,,greyscale_top,,,,,,,,
+C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_output.v,1608237673,verilog,,C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v,,greyscale_output,,,,,,,,
+C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sources_1/new/greyscale_top.v,1608237736,verilog,,C:/Users/George/Edge-Detection/greyscaler/greyscaler.srcs/sim_1/new/greyscale_top_tb.v,,greyscale_top,,,,,,,,
