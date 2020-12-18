@@ -37,13 +37,6 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 # To test this script, run the following commands from Vivado Tcl console:
 # source greyscale_algorithm_script.tcl
 
-
-# The design that will be created by this Tcl script contains the following 
-# module references:
-# greyscale_input
-
-# Please add the sources of those modules before sourcing this Tcl script.
-
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
 # <./myproj/project_1.xpr> in the current working folder.
@@ -162,25 +155,100 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
+  set M_AXIS_RESULT_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 M_AXIS_RESULT_0 ]
+
+  set S_AXIS_A_0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS_A_0 ]
+  set_property -dict [ list \
+   CONFIG.HAS_TKEEP {0} \
+   CONFIG.HAS_TLAST {0} \
+   CONFIG.HAS_TREADY {1} \
+   CONFIG.HAS_TSTRB {0} \
+   CONFIG.LAYERED_METADATA {undef} \
+   CONFIG.TDATA_NUM_BYTES {4} \
+   CONFIG.TDEST_WIDTH {0} \
+   CONFIG.TID_WIDTH {0} \
+   CONFIG.TUSER_WIDTH {0} \
+   ] $S_AXIS_A_0
+
+  set S_AXIS_A_1 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS_A_1 ]
+  set_property -dict [ list \
+   CONFIG.HAS_TKEEP {0} \
+   CONFIG.HAS_TLAST {0} \
+   CONFIG.HAS_TREADY {1} \
+   CONFIG.HAS_TSTRB {0} \
+   CONFIG.LAYERED_METADATA {undef} \
+   CONFIG.TDATA_NUM_BYTES {4} \
+   CONFIG.TDEST_WIDTH {0} \
+   CONFIG.TID_WIDTH {0} \
+   CONFIG.TUSER_WIDTH {0} \
+   ] $S_AXIS_A_1
+
+  set S_AXIS_A_2 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS_A_2 ]
+  set_property -dict [ list \
+   CONFIG.HAS_TKEEP {0} \
+   CONFIG.HAS_TLAST {0} \
+   CONFIG.HAS_TREADY {1} \
+   CONFIG.HAS_TSTRB {0} \
+   CONFIG.LAYERED_METADATA {undef} \
+   CONFIG.TDATA_NUM_BYTES {4} \
+   CONFIG.TDEST_WIDTH {0} \
+   CONFIG.TID_WIDTH {0} \
+   CONFIG.TUSER_WIDTH {0} \
+   ] $S_AXIS_A_2
+
+  set S_AXIS_B_0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS_B_0 ]
+  set_property -dict [ list \
+   CONFIG.HAS_TKEEP {0} \
+   CONFIG.HAS_TLAST {0} \
+   CONFIG.HAS_TREADY {1} \
+   CONFIG.HAS_TSTRB {0} \
+   CONFIG.LAYERED_METADATA {undef} \
+   CONFIG.TDATA_NUM_BYTES {4} \
+   CONFIG.TDEST_WIDTH {0} \
+   CONFIG.TID_WIDTH {0} \
+   CONFIG.TUSER_WIDTH {0} \
+   ] $S_AXIS_B_0
+
+  set S_AXIS_B_1 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS_B_1 ]
+  set_property -dict [ list \
+   CONFIG.HAS_TKEEP {0} \
+   CONFIG.HAS_TLAST {0} \
+   CONFIG.HAS_TREADY {1} \
+   CONFIG.HAS_TSTRB {0} \
+   CONFIG.LAYERED_METADATA {undef} \
+   CONFIG.TDATA_NUM_BYTES {4} \
+   CONFIG.TDEST_WIDTH {0} \
+   CONFIG.TID_WIDTH {0} \
+   CONFIG.TUSER_WIDTH {0} \
+   ] $S_AXIS_B_1
+
+  set S_AXIS_B_2 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS_B_2 ]
+  set_property -dict [ list \
+   CONFIG.HAS_TKEEP {0} \
+   CONFIG.HAS_TLAST {0} \
+   CONFIG.HAS_TREADY {1} \
+   CONFIG.HAS_TSTRB {0} \
+   CONFIG.LAYERED_METADATA {undef} \
+   CONFIG.TDATA_NUM_BYTES {4} \
+   CONFIG.TDEST_WIDTH {0} \
+   CONFIG.TID_WIDTH {0} \
+   CONFIG.TUSER_WIDTH {0} \
+   ] $S_AXIS_B_2
+
 
   # Create ports
-  set blue_0 [ create_bd_port -dir I -from 7 -to 0 blue_0 ]
-  set byte_convert_done_0 [ create_bd_port -dir I byte_convert_done_0 ]
   set clk_0 [ create_bd_port -dir I -type clk clk_0 ]
-  set green_0 [ create_bd_port -dir I -from 7 -to 0 green_0 ]
-  set m_axis_result_tdata_0 [ create_bd_port -dir O -from 31 -to 0 m_axis_result_tdata_0 ]
-  set m_axis_result_tready_0 [ create_bd_port -dir I m_axis_result_tready_0 ]
-  set m_axis_result_tvalid [ create_bd_port -dir O m_axis_result_tvalid ]
-  set red_0 [ create_bd_port -dir I -from 7 -to 0 red_0 ]
 
   # Create instance: floating_point_0, and set properties
   set floating_point_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:floating_point:7.1 floating_point_0 ]
   set_property -dict [ list \
-   CONFIG.C_Latency {1} \
+   CONFIG.C_Latency {8} \
    CONFIG.C_Mult_Usage {Full_Usage} \
    CONFIG.C_Rate {1} \
    CONFIG.C_Result_Exponent_Width {8} \
    CONFIG.C_Result_Fraction_Width {24} \
+   CONFIG.Flow_Control {NonBlocking} \
+   CONFIG.Has_RESULT_TREADY {false} \
    CONFIG.Maximum_Latency {false} \
    CONFIG.Operation_Type {Multiply} \
    CONFIG.Result_Precision_Type {Single} \
@@ -190,11 +258,13 @@ proc create_root_design { parentCell } {
   set floating_point_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:floating_point:7.1 floating_point_1 ]
   set_property -dict [ list \
    CONFIG.Add_Sub_Value {Add} \
-   CONFIG.C_Latency {1} \
+   CONFIG.C_Latency {16} \
    CONFIG.C_Mult_Usage {Medium_Usage} \
    CONFIG.C_Rate {1} \
    CONFIG.C_Result_Exponent_Width {8} \
    CONFIG.C_Result_Fraction_Width {24} \
+   CONFIG.Flow_Control {NonBlocking} \
+   CONFIG.Has_RESULT_TREADY {false} \
    CONFIG.Maximum_Latency {false} \
    CONFIG.Operation_Type {FMA} \
    CONFIG.Result_Precision_Type {Single} \
@@ -203,58 +273,32 @@ proc create_root_design { parentCell } {
   # Create instance: floating_point_2, and set properties
   set floating_point_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:floating_point:7.1 floating_point_2 ]
   set_property -dict [ list \
-   CONFIG.C_Latency {1} \
+   CONFIG.Add_Sub_Value {Add} \
+   CONFIG.C_Latency {16} \
    CONFIG.C_Mult_Usage {Medium_Usage} \
    CONFIG.C_Rate {1} \
    CONFIG.C_Result_Exponent_Width {8} \
    CONFIG.C_Result_Fraction_Width {24} \
+   CONFIG.Flow_Control {NonBlocking} \
+   CONFIG.Has_RESULT_TREADY {false} \
    CONFIG.Maximum_Latency {false} \
    CONFIG.Operation_Type {FMA} \
    CONFIG.Result_Precision_Type {Single} \
  ] $floating_point_2
 
-  # Create instance: greyscale_input_0, and set properties
-  set block_name greyscale_input
-  set block_cell_name greyscale_input_0
-  if { [catch {set greyscale_input_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $greyscale_input_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create interface connections
+  connect_bd_intf_net -intf_net S_AXIS_A_0_1 [get_bd_intf_ports S_AXIS_A_0] [get_bd_intf_pins floating_point_0/S_AXIS_A]
+  connect_bd_intf_net -intf_net S_AXIS_A_1_1 [get_bd_intf_ports S_AXIS_A_1] [get_bd_intf_pins floating_point_1/S_AXIS_A]
+  connect_bd_intf_net -intf_net S_AXIS_A_2_1 [get_bd_intf_ports S_AXIS_A_2] [get_bd_intf_pins floating_point_2/S_AXIS_A]
+  connect_bd_intf_net -intf_net S_AXIS_B_0_1 [get_bd_intf_ports S_AXIS_B_0] [get_bd_intf_pins floating_point_0/S_AXIS_B]
+  connect_bd_intf_net -intf_net S_AXIS_B_1_1 [get_bd_intf_ports S_AXIS_B_1] [get_bd_intf_pins floating_point_1/S_AXIS_B]
+  connect_bd_intf_net -intf_net S_AXIS_B_2_1 [get_bd_intf_ports S_AXIS_B_2] [get_bd_intf_pins floating_point_2/S_AXIS_B]
   connect_bd_intf_net -intf_net floating_point_0_M_AXIS_RESULT [get_bd_intf_pins floating_point_0/M_AXIS_RESULT] [get_bd_intf_pins floating_point_1/S_AXIS_C]
   connect_bd_intf_net -intf_net floating_point_1_M_AXIS_RESULT [get_bd_intf_pins floating_point_1/M_AXIS_RESULT] [get_bd_intf_pins floating_point_2/S_AXIS_C]
+  connect_bd_intf_net -intf_net floating_point_2_M_AXIS_RESULT [get_bd_intf_ports M_AXIS_RESULT_0] [get_bd_intf_pins floating_point_2/M_AXIS_RESULT]
 
   # Create port connections
-  connect_bd_net -net blue_0_1 [get_bd_ports blue_0] [get_bd_pins greyscale_input_0/blue]
-  connect_bd_net -net byte_convert_done_0_1 [get_bd_ports byte_convert_done_0] [get_bd_pins greyscale_input_0/byte_convert_done]
-  connect_bd_net -net clk_0_1 [get_bd_ports clk_0] [get_bd_pins floating_point_0/aclk] [get_bd_pins floating_point_1/aclk] [get_bd_pins floating_point_2/aclk] [get_bd_pins greyscale_input_0/clk]
-  connect_bd_net -net floating_point_0_s_axis_a_tready [get_bd_pins floating_point_0/s_axis_a_tready] [get_bd_pins greyscale_input_0/A0_ready]
-  connect_bd_net -net floating_point_0_s_axis_b_tready [get_bd_pins floating_point_0/s_axis_b_tready] [get_bd_pins greyscale_input_0/B0_ready]
-  connect_bd_net -net floating_point_1_s_axis_a_tready [get_bd_pins floating_point_1/s_axis_a_tready] [get_bd_pins greyscale_input_0/A1_ready]
-  connect_bd_net -net floating_point_1_s_axis_b_tready [get_bd_pins floating_point_1/s_axis_b_tready] [get_bd_pins greyscale_input_0/B1_ready]
-  connect_bd_net -net floating_point_2_m_axis_result_tdata [get_bd_ports m_axis_result_tdata_0] [get_bd_pins floating_point_2/m_axis_result_tdata]
-  connect_bd_net -net floating_point_2_m_axis_result_tvalid [get_bd_ports m_axis_result_tvalid] [get_bd_pins floating_point_2/m_axis_result_tvalid] [get_bd_pins greyscale_input_0/m_axis_result_tvalid_0]
-  connect_bd_net -net floating_point_2_s_axis_a_tready [get_bd_pins floating_point_2/s_axis_a_tready] [get_bd_pins greyscale_input_0/A2_ready]
-  connect_bd_net -net floating_point_2_s_axis_b_tready [get_bd_pins floating_point_2/s_axis_b_tready] [get_bd_pins greyscale_input_0/B2_ready]
-  connect_bd_net -net green_0_1 [get_bd_ports green_0] [get_bd_pins greyscale_input_0/green]
-  connect_bd_net -net greyscale_input_0_A0_red [get_bd_pins floating_point_0/s_axis_a_tdata] [get_bd_pins greyscale_input_0/A0_red]
-  connect_bd_net -net greyscale_input_0_A0_valid [get_bd_pins floating_point_0/s_axis_a_tvalid] [get_bd_pins greyscale_input_0/A0_valid]
-  connect_bd_net -net greyscale_input_0_A1_green [get_bd_pins floating_point_1/s_axis_a_tdata] [get_bd_pins greyscale_input_0/A1_green]
-  connect_bd_net -net greyscale_input_0_A1_valid [get_bd_pins floating_point_1/s_axis_a_tvalid] [get_bd_pins greyscale_input_0/A1_valid]
-  connect_bd_net -net greyscale_input_0_A2_blue [get_bd_pins floating_point_2/s_axis_a_tdata] [get_bd_pins greyscale_input_0/A2_blue]
-  connect_bd_net -net greyscale_input_0_A2_valid [get_bd_pins floating_point_2/s_axis_a_tvalid] [get_bd_pins greyscale_input_0/A2_valid]
-  connect_bd_net -net greyscale_input_0_B0_multiply [get_bd_pins floating_point_0/s_axis_b_tdata] [get_bd_pins greyscale_input_0/B0_multiply]
-  connect_bd_net -net greyscale_input_0_B0_valid [get_bd_pins floating_point_0/s_axis_b_tvalid] [get_bd_pins greyscale_input_0/B0_valid]
-  connect_bd_net -net greyscale_input_0_B1_multiply [get_bd_pins floating_point_1/s_axis_b_tdata] [get_bd_pins greyscale_input_0/B1_multiply]
-  connect_bd_net -net greyscale_input_0_B1_valid [get_bd_pins floating_point_1/s_axis_b_tvalid] [get_bd_pins greyscale_input_0/B1_valid]
-  connect_bd_net -net greyscale_input_0_B2_multiply [get_bd_pins floating_point_2/s_axis_b_tdata] [get_bd_pins greyscale_input_0/B2_multiply]
-  connect_bd_net -net greyscale_input_0_B2_valid [get_bd_pins floating_point_2/s_axis_b_tvalid] [get_bd_pins greyscale_input_0/B2_valid]
-  connect_bd_net -net m_axis_result_tready_0_1 [get_bd_ports m_axis_result_tready_0] [get_bd_pins floating_point_2/m_axis_result_tready]
-  connect_bd_net -net red_0_1 [get_bd_ports red_0] [get_bd_pins greyscale_input_0/red]
+  connect_bd_net -net clk_0_1 [get_bd_ports clk_0] [get_bd_pins floating_point_0/aclk] [get_bd_pins floating_point_1/aclk] [get_bd_pins floating_point_2/aclk]
 
   # Create address segments
 

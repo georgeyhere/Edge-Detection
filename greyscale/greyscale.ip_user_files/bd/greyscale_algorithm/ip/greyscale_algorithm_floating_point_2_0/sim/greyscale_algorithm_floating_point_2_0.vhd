@@ -60,19 +60,12 @@ ENTITY greyscale_algorithm_floating_point_2_0 IS
   PORT (
     aclk : IN STD_LOGIC;
     s_axis_a_tvalid : IN STD_LOGIC;
-    s_axis_a_tready : OUT STD_LOGIC;
     s_axis_a_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     s_axis_b_tvalid : IN STD_LOGIC;
-    s_axis_b_tready : OUT STD_LOGIC;
     s_axis_b_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     s_axis_c_tvalid : IN STD_LOGIC;
-    s_axis_c_tready : OUT STD_LOGIC;
     s_axis_c_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    s_axis_operation_tvalid : IN STD_LOGIC;
-    s_axis_operation_tready : OUT STD_LOGIC;
-    s_axis_operation_tdata : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     m_axis_result_tvalid : OUT STD_LOGIC;
-    m_axis_result_tready : IN STD_LOGIC;
     m_axis_result_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END greyscale_algorithm_floating_point_2_0;
@@ -193,8 +186,7 @@ ARCHITECTURE greyscale_algorithm_floating_point_2_0_arch OF greyscale_algorithm_
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_result_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_RESULT TDATA";
-  ATTRIBUTE X_INTERFACE_INFO OF m_axis_result_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_RESULT TREADY";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF m_axis_result_tvalid: SIGNAL IS "XIL_INTERFACENAME M_AXIS_RESULT, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN greyscale_algorithm_clk_0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency width format long minimum {} maximum {}} value 32} bitoffs" & 
+  ATTRIBUTE X_INTERFACE_PARAMETER OF m_axis_result_tvalid: SIGNAL IS "XIL_INTERFACENAME M_AXIS_RESULT, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN greyscale_algorithm_clk_0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency width format long minimum {} maximum {}} value 32} bitoffs" & 
 "et {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type generated dependency fractwidth format long minimum {} maximum {}} value 24}}}}} TDATA_WIDTH 32 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate depend" & 
 "ency {} format long minimum {} maximum {}} value 0} struct {field_underflow {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value underflow} enabled {attribs {resolve_type generated dependency underflow_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency underflow_bitwidth format long minimu" & 
 "m {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} field_overflow {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value overflow} enabled {attribs {resolve_type generated dependency overflow_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resol" & 
@@ -210,13 +202,8 @@ ARCHITECTURE greyscale_algorithm_floating_point_2_0_arch OF greyscale_algorithm_
 "tion_tuser} enabled {attribs {resolve_type generated dependency operation_tuser_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency operation_tuser_bitoffset format long minimum {} maximum {}} value 0}}}}}} TUSE" & 
 "R_WIDTH 0}, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_result_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_RESULT TVALID";
-  ATTRIBUTE X_INTERFACE_INFO OF s_axis_operation_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_OPERATION TDATA";
-  ATTRIBUTE X_INTERFACE_INFO OF s_axis_operation_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_OPERATION TREADY";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_operation_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_OPERATION, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN greyscale_algorithm_clk_0, LAYERED_METADATA undef, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF s_axis_operation_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_OPERATION TVALID";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_c_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_C TDATA";
-  ATTRIBUTE X_INTERFACE_INFO OF s_axis_c_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_C TREADY";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_c_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_C, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN greyscale_algorithm_clk_0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency width format long minimum {} maximum {}} value 32} bitoffset {a" & 
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_c_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_C, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN greyscale_algorithm_clk_0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency width format long minimum {} maximum {}} value 32} bitoffset {a" & 
 "ttribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type generated dependency fractwidth format long minimum {} maximum {}} value 24}}}}} TDATA_WIDTH 32 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency " & 
 "{} format long minimum {} maximum {}} value 0} struct {field_underflow {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value underflow} enabled {attribs {resolve_type generated dependency underflow_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency underflow_bitwidth format long minimum {} " & 
 "maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} field_overflow {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value overflow} enabled {attribs {resolve_type generated dependency overflow_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_ty" & 
@@ -233,12 +220,10 @@ ARCHITECTURE greyscale_algorithm_floating_point_2_0_arch OF greyscale_algorithm_
 "TH 0}, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_c_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_C TVALID";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_b_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_B TDATA";
-  ATTRIBUTE X_INTERFACE_INFO OF s_axis_b_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_B TREADY";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_b_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_B, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN greyscale_algorithm_clk_0, LAYERED_METADATA undef, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_b_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_B, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN greyscale_algorithm_clk_0, LAYERED_METADATA undef, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_b_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_B TVALID";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_a_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_A TDATA";
-  ATTRIBUTE X_INTERFACE_INFO OF s_axis_a_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_A TREADY";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_a_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_A, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN greyscale_algorithm_clk_0, LAYERED_METADATA undef, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_a_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_A, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN greyscale_algorithm_clk_0, LAYERED_METADATA undef, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_a_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_A TVALID";
   ATTRIBUTE X_INTERFACE_PARAMETER OF aclk: SIGNAL IS "XIL_INTERFACENAME aclk_intf, ASSOCIATED_BUSIF S_AXIS_OPERATION:M_AXIS_RESULT:S_AXIS_C:S_AXIS_B:S_AXIS_A, ASSOCIATED_RESET aresetn, ASSOCIATED_CLKEN aclken, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN greyscale_algorithm_clk_0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 aclk_intf CLK";
@@ -261,7 +246,7 @@ BEGIN
       C_HAS_LOGARITHM => 0,
       C_HAS_EXPONENTIAL => 0,
       C_HAS_FMA => 1,
-      C_HAS_FMS => 1,
+      C_HAS_FMS => 0,
       C_HAS_UNFUSED_MULTIPLY_ADD => 0,
       C_HAS_UNFUSED_MULTIPLY_SUB => 0,
       C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A => 0,
@@ -279,7 +264,7 @@ BEGIN
       C_RESULT_WIDTH => 32,
       C_RESULT_FRACTION_WIDTH => 24,
       C_COMPARE_OPERATION => 8,
-      C_LATENCY => 1,
+      C_LATENCY => 16,
       C_OPTIMIZATION => 1,
       C_MULT_USAGE => 1,
       C_BRAM_USAGE => 0,
@@ -295,7 +280,7 @@ BEGIN
       C_HAS_ACCUM_INPUT_OVERFLOW => 0,
       C_HAS_ACLKEN => 0,
       C_HAS_ARESETN => 0,
-      C_THROTTLE_SCHEME => 1,
+      C_THROTTLE_SCHEME => 3,
       C_HAS_A_TUSER => 0,
       C_HAS_A_TLAST => 0,
       C_HAS_B => 1,
@@ -304,7 +289,7 @@ BEGIN
       C_HAS_C => 1,
       C_HAS_C_TUSER => 0,
       C_HAS_C_TLAST => 0,
-      C_HAS_OPERATION => 1,
+      C_HAS_OPERATION => 0,
       C_HAS_OPERATION_TUSER => 0,
       C_HAS_OPERATION_TLAST => 0,
       C_HAS_RESULT_TUSER => 0,
@@ -327,27 +312,23 @@ BEGIN
       aclken => '1',
       aresetn => '1',
       s_axis_a_tvalid => s_axis_a_tvalid,
-      s_axis_a_tready => s_axis_a_tready,
       s_axis_a_tdata => s_axis_a_tdata,
       s_axis_a_tuser => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
       s_axis_a_tlast => '0',
       s_axis_b_tvalid => s_axis_b_tvalid,
-      s_axis_b_tready => s_axis_b_tready,
       s_axis_b_tdata => s_axis_b_tdata,
       s_axis_b_tuser => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
       s_axis_b_tlast => '0',
       s_axis_c_tvalid => s_axis_c_tvalid,
-      s_axis_c_tready => s_axis_c_tready,
       s_axis_c_tdata => s_axis_c_tdata,
       s_axis_c_tuser => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
       s_axis_c_tlast => '0',
-      s_axis_operation_tvalid => s_axis_operation_tvalid,
-      s_axis_operation_tready => s_axis_operation_tready,
-      s_axis_operation_tdata => s_axis_operation_tdata,
+      s_axis_operation_tvalid => '0',
+      s_axis_operation_tdata => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 8)),
       s_axis_operation_tuser => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
       s_axis_operation_tlast => '0',
       m_axis_result_tvalid => m_axis_result_tvalid,
-      m_axis_result_tready => m_axis_result_tready,
+      m_axis_result_tready => '0',
       m_axis_result_tdata => m_axis_result_tdata
     );
 END greyscale_algorithm_floating_point_2_0_arch;

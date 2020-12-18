@@ -27,11 +27,6 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_0_0/sim/greyscale_algorithm_floating_point_0_0.vhd" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/greyscale_algorithm/ip/greyscale_algorithm_greyscale_input_0_0/sim/greyscale_algorithm_greyscale_input_0_0.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
   "../../../bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_1_0/sim/greyscale_algorithm_floating_point_1_0.vhd" \
   "../../../bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_2_0/sim/greyscale_algorithm_floating_point_2_0.vhd" \
 -endlib

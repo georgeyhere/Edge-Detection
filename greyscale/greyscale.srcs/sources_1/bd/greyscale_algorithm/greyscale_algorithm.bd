@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x9F402AE92153E76C",
+      "boundary_crc": "0xCB1E16FBF5C5B2C7",
       "device": "xc7a50tcsg324-1",
       "name": "greyscale_algorithm",
       "synth_flow_mode": "None",
@@ -11,14 +11,371 @@
     "design_tree": {
       "floating_point_0": "",
       "floating_point_1": "",
-      "floating_point_2": "",
-      "greyscale_input_0": ""
+      "floating_point_2": ""
+    },
+    "interface_ports": {
+      "M_AXIS_RESULT_0": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "TDATA_NUM_BYTES": {
+            "value": "4",
+            "value_src": "auto_prop"
+          },
+          "TDEST_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TID_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "TUSER_WIDTH": {
+            "value": "0",
+            "value_src": "auto_prop"
+          },
+          "HAS_TREADY": {
+            "value": "0",
+            "value_src": "auto_prop"
+          },
+          "HAS_TSTRB": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "HAS_TKEEP": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "HAS_TLAST": {
+            "value": "0",
+            "value_src": "auto_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "greyscale_algorithm_clk_0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency width format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type generated dependency fractwidth format long minimum {} maximum {}} value 24}}}}} TDATA_WIDTH 32 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_underflow {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value underflow} enabled {attribs {resolve_type generated dependency underflow_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency underflow_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} field_overflow {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value overflow} enabled {attribs {resolve_type generated dependency overflow_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency overflow_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency overflow_bitoffset format long minimum {} maximum {}} value 0}}} field_invalid_op {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value invalid_op} enabled {attribs {resolve_type generated dependency invalid_op_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency invalid_op_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency invalid_op_bitoffset format long minimum {} maximum {}} value 0}}} field_div_by_zero {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value div_by_zero} enabled {attribs {resolve_type generated dependency div_by_zero_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency div_by_zero_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency div_by_zero_bitoffset format long minimum {} maximum {}} value 0}}} field_accum_input_overflow {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value accum_input_overflow} enabled {attribs {resolve_type generated dependency accum_input_overflow_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency accum_input_overflow_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency accum_input_overflow_bitoffset format long minimum {} maximum {}} value 0}}} field_accum_overflow {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value accum_overflow} enabled {attribs {resolve_type generated dependency accum_overflow_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency accum_overflow_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency accum_overflow_bitoffset format long minimum {} maximum {}} value 0}}} field_a_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value a_tuser} enabled {attribs {resolve_type generated dependency a_tuser_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency a_tuser_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency a_tuser_bitoffset format long minimum {} maximum {}} value 0}}} field_b_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value b_tuser} enabled {attribs {resolve_type generated dependency b_tuser_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency b_tuser_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency b_tuser_bitoffset format long minimum {} maximum {}} value 0}}} field_c_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value c_tuser} enabled {attribs {resolve_type generated dependency c_tuser_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency c_tuser_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency c_tuser_bitoffset format long minimum {} maximum {}} value 0}}} field_operation_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value operation_tuser} enabled {attribs {resolve_type generated dependency operation_tuser_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency operation_tuser_bitoffset format long minimum {} maximum {}} value 0}}}}}} TUSER_WIDTH 0}",
+            "value_src": "ip_prop"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          }
+        }
+      },
+      "S_AXIS_A_0": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "TDATA_NUM_BYTES": {
+            "value": "4"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "0"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "0"
+          },
+          "HAS_TKEEP": {
+            "value": "0"
+          },
+          "HAS_TLAST": {
+            "value": "0"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "greyscale_algorithm_clk_0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          }
+        }
+      },
+      "S_AXIS_B_0": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "TDATA_NUM_BYTES": {
+            "value": "4"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "0"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "0"
+          },
+          "HAS_TKEEP": {
+            "value": "0"
+          },
+          "HAS_TLAST": {
+            "value": "0"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "greyscale_algorithm_clk_0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          }
+        }
+      },
+      "S_AXIS_A_1": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "TDATA_NUM_BYTES": {
+            "value": "4"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "0"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "0"
+          },
+          "HAS_TKEEP": {
+            "value": "0"
+          },
+          "HAS_TLAST": {
+            "value": "0"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "greyscale_algorithm_clk_0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          }
+        }
+      },
+      "S_AXIS_B_1": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "TDATA_NUM_BYTES": {
+            "value": "4"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "0"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "0"
+          },
+          "HAS_TKEEP": {
+            "value": "0"
+          },
+          "HAS_TLAST": {
+            "value": "0"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "greyscale_algorithm_clk_0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          }
+        }
+      },
+      "S_AXIS_A_2": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "TDATA_NUM_BYTES": {
+            "value": "4"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "0"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "0"
+          },
+          "HAS_TKEEP": {
+            "value": "0"
+          },
+          "HAS_TLAST": {
+            "value": "0"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "greyscale_algorithm_clk_0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          }
+        }
+      },
+      "S_AXIS_B_2": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "TDATA_NUM_BYTES": {
+            "value": "4"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "0"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "0"
+          },
+          "HAS_TKEEP": {
+            "value": "0"
+          },
+          "HAS_TLAST": {
+            "value": "0"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "greyscale_algorithm_clk_0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          }
+        }
+      }
     },
     "ports": {
       "clk_0": {
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "M_AXIS_RESULT_0:S_AXIS_A_0:S_AXIS_B_0:S_AXIS_A_1:S_AXIS_B_1:S_AXIS_A_2:S_AXIS_B_2",
+            "value_src": "default"
+          },
           "CLK_DOMAIN": {
             "value": "greyscale_algorithm_clk_0",
             "value_src": "default"
@@ -36,35 +393,6 @@
             "value_src": "default"
           }
         }
-      },
-      "byte_convert_done_0": {
-        "direction": "I"
-      },
-      "blue_0": {
-        "direction": "I",
-        "left": "7",
-        "right": "0"
-      },
-      "green_0": {
-        "direction": "I",
-        "left": "7",
-        "right": "0"
-      },
-      "red_0": {
-        "direction": "I",
-        "left": "7",
-        "right": "0"
-      },
-      "m_axis_result_tready_0": {
-        "direction": "I"
-      },
-      "m_axis_result_tdata_0": {
-        "direction": "O",
-        "left": "31",
-        "right": "0"
-      },
-      "m_axis_result_tvalid": {
-        "direction": "O"
       }
     },
     "components": {
@@ -73,7 +401,7 @@
         "xci_name": "greyscale_algorithm_floating_point_0_0",
         "parameters": {
           "C_Latency": {
-            "value": "1"
+            "value": "8"
           },
           "C_Mult_Usage": {
             "value": "Full_Usage"
@@ -86,6 +414,12 @@
           },
           "C_Result_Fraction_Width": {
             "value": "24"
+          },
+          "Flow_Control": {
+            "value": "NonBlocking"
+          },
+          "Has_RESULT_TREADY": {
+            "value": "false"
           },
           "Maximum_Latency": {
             "value": "false"
@@ -106,7 +440,7 @@
             "value": "Add"
           },
           "C_Latency": {
-            "value": "1"
+            "value": "16"
           },
           "C_Mult_Usage": {
             "value": "Medium_Usage"
@@ -119,6 +453,12 @@
           },
           "C_Result_Fraction_Width": {
             "value": "24"
+          },
+          "Flow_Control": {
+            "value": "NonBlocking"
+          },
+          "Has_RESULT_TREADY": {
+            "value": "false"
           },
           "Maximum_Latency": {
             "value": "false"
@@ -135,8 +475,11 @@
         "vlnv": "xilinx.com:ip:floating_point:7.1",
         "xci_name": "greyscale_algorithm_floating_point_2_0",
         "parameters": {
+          "Add_Sub_Value": {
+            "value": "Add"
+          },
           "C_Latency": {
-            "value": "1"
+            "value": "16"
           },
           "C_Mult_Usage": {
             "value": "Medium_Usage"
@@ -150,6 +493,12 @@
           "C_Result_Fraction_Width": {
             "value": "24"
           },
+          "Flow_Control": {
+            "value": "NonBlocking"
+          },
+          "Has_RESULT_TREADY": {
+            "value": "false"
+          },
           "Maximum_Latency": {
             "value": "false"
           },
@@ -160,117 +509,15 @@
             "value": "Single"
           }
         }
-      },
-      "greyscale_input_0": {
-        "vlnv": "xilinx.com:module_ref:greyscale_input:1.0",
-        "xci_name": "greyscale_algorithm_greyscale_input_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "greyscale_input",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "greyscale_algorithm_clk_0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "red": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "green": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "blue": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "byte_convert_done": {
-            "direction": "I"
-          },
-          "m_axis_result_tvalid_0": {
-            "direction": "I"
-          },
-          "A0_ready": {
-            "direction": "I"
-          },
-          "B0_ready": {
-            "direction": "I"
-          },
-          "A1_ready": {
-            "direction": "I"
-          },
-          "B1_ready": {
-            "direction": "I"
-          },
-          "A2_ready": {
-            "direction": "I"
-          },
-          "B2_ready": {
-            "direction": "I"
-          },
-          "A0_valid": {
-            "direction": "O"
-          },
-          "B0_valid": {
-            "direction": "O"
-          },
-          "A1_valid": {
-            "direction": "O"
-          },
-          "B1_valid": {
-            "direction": "O"
-          },
-          "A2_valid": {
-            "direction": "O"
-          },
-          "B2_valid": {
-            "direction": "O"
-          },
-          "A0_red": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "B0_multiply": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "A1_green": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "B1_multiply": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "A2_blue": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "B2_multiply": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          }
-        }
       }
     },
     "interface_nets": {
+      "S_AXIS_A_0_1": {
+        "interface_ports": [
+          "S_AXIS_A_0",
+          "floating_point_0/S_AXIS_A"
+        ]
+      },
       "floating_point_1_M_AXIS_RESULT": {
         "interface_ports": [
           "floating_point_1/M_AXIS_RESULT",
@@ -282,6 +529,42 @@
           "floating_point_0/M_AXIS_RESULT",
           "floating_point_1/S_AXIS_C"
         ]
+      },
+      "floating_point_2_M_AXIS_RESULT": {
+        "interface_ports": [
+          "M_AXIS_RESULT_0",
+          "floating_point_2/M_AXIS_RESULT"
+        ]
+      },
+      "S_AXIS_B_1_1": {
+        "interface_ports": [
+          "S_AXIS_B_1",
+          "floating_point_1/S_AXIS_B"
+        ]
+      },
+      "S_AXIS_A_1_1": {
+        "interface_ports": [
+          "S_AXIS_A_1",
+          "floating_point_1/S_AXIS_A"
+        ]
+      },
+      "S_AXIS_B_0_1": {
+        "interface_ports": [
+          "S_AXIS_B_0",
+          "floating_point_0/S_AXIS_B"
+        ]
+      },
+      "S_AXIS_B_2_1": {
+        "interface_ports": [
+          "S_AXIS_B_2",
+          "floating_point_2/S_AXIS_B"
+        ]
+      },
+      "S_AXIS_A_2_1": {
+        "interface_ports": [
+          "S_AXIS_A_2",
+          "floating_point_2/S_AXIS_A"
+        ]
       }
     },
     "nets": {
@@ -290,159 +573,7 @@
           "clk_0",
           "floating_point_0/aclk",
           "floating_point_2/aclk",
-          "floating_point_1/aclk",
-          "greyscale_input_0/clk"
-        ]
-      },
-      "greyscale_input_0_A0_red": {
-        "ports": [
-          "greyscale_input_0/A0_red",
-          "floating_point_0/s_axis_a_tdata"
-        ]
-      },
-      "greyscale_input_0_B0_multiply": {
-        "ports": [
-          "greyscale_input_0/B0_multiply",
-          "floating_point_0/s_axis_b_tdata"
-        ]
-      },
-      "floating_point_0_s_axis_b_tready": {
-        "ports": [
-          "floating_point_0/s_axis_b_tready",
-          "greyscale_input_0/B0_ready"
-        ]
-      },
-      "greyscale_input_0_B0_valid": {
-        "ports": [
-          "greyscale_input_0/B0_valid",
-          "floating_point_0/s_axis_b_tvalid"
-        ]
-      },
-      "greyscale_input_0_A0_valid": {
-        "ports": [
-          "greyscale_input_0/A0_valid",
-          "floating_point_0/s_axis_a_tvalid"
-        ]
-      },
-      "floating_point_0_s_axis_a_tready": {
-        "ports": [
-          "floating_point_0/s_axis_a_tready",
-          "greyscale_input_0/A0_ready"
-        ]
-      },
-      "greyscale_input_0_A1_green": {
-        "ports": [
-          "greyscale_input_0/A1_green",
-          "floating_point_1/s_axis_a_tdata"
-        ]
-      },
-      "floating_point_1_s_axis_a_tready": {
-        "ports": [
-          "floating_point_1/s_axis_a_tready",
-          "greyscale_input_0/A1_ready"
-        ]
-      },
-      "greyscale_input_0_A1_valid": {
-        "ports": [
-          "greyscale_input_0/A1_valid",
-          "floating_point_1/s_axis_a_tvalid"
-        ]
-      },
-      "greyscale_input_0_B1_multiply": {
-        "ports": [
-          "greyscale_input_0/B1_multiply",
-          "floating_point_1/s_axis_b_tdata"
-        ]
-      },
-      "floating_point_1_s_axis_b_tready": {
-        "ports": [
-          "floating_point_1/s_axis_b_tready",
-          "greyscale_input_0/B1_ready"
-        ]
-      },
-      "greyscale_input_0_B1_valid": {
-        "ports": [
-          "greyscale_input_0/B1_valid",
-          "floating_point_1/s_axis_b_tvalid"
-        ]
-      },
-      "greyscale_input_0_A2_blue": {
-        "ports": [
-          "greyscale_input_0/A2_blue",
-          "floating_point_2/s_axis_a_tdata"
-        ]
-      },
-      "floating_point_2_s_axis_a_tready": {
-        "ports": [
-          "floating_point_2/s_axis_a_tready",
-          "greyscale_input_0/A2_ready"
-        ]
-      },
-      "greyscale_input_0_A2_valid": {
-        "ports": [
-          "greyscale_input_0/A2_valid",
-          "floating_point_2/s_axis_a_tvalid"
-        ]
-      },
-      "greyscale_input_0_B2_multiply": {
-        "ports": [
-          "greyscale_input_0/B2_multiply",
-          "floating_point_2/s_axis_b_tdata"
-        ]
-      },
-      "floating_point_2_s_axis_b_tready": {
-        "ports": [
-          "floating_point_2/s_axis_b_tready",
-          "greyscale_input_0/B2_ready"
-        ]
-      },
-      "greyscale_input_0_B2_valid": {
-        "ports": [
-          "greyscale_input_0/B2_valid",
-          "floating_point_2/s_axis_b_tvalid"
-        ]
-      },
-      "byte_convert_done_0_1": {
-        "ports": [
-          "byte_convert_done_0",
-          "greyscale_input_0/byte_convert_done"
-        ]
-      },
-      "blue_0_1": {
-        "ports": [
-          "blue_0",
-          "greyscale_input_0/blue"
-        ]
-      },
-      "green_0_1": {
-        "ports": [
-          "green_0",
-          "greyscale_input_0/green"
-        ]
-      },
-      "red_0_1": {
-        "ports": [
-          "red_0",
-          "greyscale_input_0/red"
-        ]
-      },
-      "floating_point_2_m_axis_result_tvalid": {
-        "ports": [
-          "floating_point_2/m_axis_result_tvalid",
-          "m_axis_result_tvalid",
-          "greyscale_input_0/m_axis_result_tvalid_0"
-        ]
-      },
-      "m_axis_result_tready_0_1": {
-        "ports": [
-          "m_axis_result_tready_0",
-          "floating_point_2/m_axis_result_tready"
-        ]
-      },
-      "floating_point_2_m_axis_result_tdata": {
-        "ports": [
-          "floating_point_2/m_axis_result_tdata",
-          "m_axis_result_tdata_0"
+          "floating_point_1/aclk"
         ]
       }
     }

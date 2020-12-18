@@ -27,9 +27,9 @@ reg byte_convert_done = 1;
 reg [7:0] red = 8'b00011100;
 reg [7:0] blue = 8'b00000111;
 reg [7:0] green = 8'b00011100;
-reg m_axis_result_tready_0 = 1;
-wire [31:0] m_axis_result_tdata_0;
-wire m_axis_result_tvalid;
+wire [31:0] M_AXIS_RESULT_0_tdata;
+reg M_AXIS_RESULT_0_tready = 1;
+wire M_AXIS_RESULT_0_tvalid;
 
 greyscale_top UUT(
 .clk(clk),
@@ -37,13 +37,14 @@ greyscale_top UUT(
 .red(red),
 .green(green),
 .blue(blue),
-.m_axis_result_tready_0(m_axis_result_tready_0),
-.m_axis_result_tdata_0(m_axis_result_tdata_0),
-.m_axis_result_tvalid(m_axis_result_tvalid)
+.M_AXIS_RESULT_0_tdata(M_AXIS_RESULT_0_tdata),
+.M_AXIS_RESULT_0_tready(M_AXIS_RESULT_0_tready),
+.M_AXIS_RESULT_0_tvalid(M_AXIS_RESULT_0_tvalid)
 );
 
 always begin
 #1 clk = ~clk;
+#5 byte_convert_done = ~byte_convert_done;
 end
     
 endmodule

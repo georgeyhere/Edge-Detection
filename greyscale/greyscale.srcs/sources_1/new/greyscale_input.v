@@ -29,7 +29,7 @@ input [7:0] green,
 input [7:0] blue,
 
 input byte_convert_done,
-input m_axis_result_tvalid_0,
+input M_AXIS_RESULT_0_tvalid,
 
 input wire A0_ready, //AXI stream slave ready inputs
 input wire B0_ready,
@@ -89,7 +89,7 @@ always@(posedge clk) begin
             A1_green <= 0;
             A2_blue <= 0;
             
-            fsm_state <= (byte_convert_done)? s1_assign : s0_idle;//if byte_convert has a new byte, assign outputs
+            fsm_state <= (byte_convert_done == 1)? s1_assign : s0_idle;//if byte_convert has a new byte, assign outputs
         end
         
         s1_assign: begin
@@ -105,7 +105,7 @@ always@(posedge clk) begin
             B1_valid <= (B1_ready) ? 1:0;
             B2_valid <= (B2_ready) ? 1:0;
             
-            fsm_state <= (m_axis_result_tvalid_0) ? s0_idle : s1_assign; //return to idle when slave produces a valid output
+            fsm_state <= (M_AXIS_RESULT_0_tvalid == 1) ? s0_idle : s1_assign; //return to idle when slave produces a valid output
         end
         
     endcase  

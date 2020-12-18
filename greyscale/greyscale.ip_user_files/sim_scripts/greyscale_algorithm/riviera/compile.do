@@ -52,11 +52,6 @@ vcom -work floating_point_v7_1_9 -93 \
 
 vcom -work xil_defaultlib -93 \
 "../../../bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_0_0/sim/greyscale_algorithm_floating_point_0_0.vhd" \
-
-vlog -work xil_defaultlib  -v2k5 \
-"../../../bd/greyscale_algorithm/ip/greyscale_algorithm_greyscale_input_0_0/sim/greyscale_algorithm_greyscale_input_0_0.v" \
-
-vcom -work xil_defaultlib -93 \
 "../../../bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_1_0/sim/greyscale_algorithm_floating_point_1_0.vhd" \
 "../../../bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_2_0/sim/greyscale_algorithm_floating_point_2_0.vhd" \
 

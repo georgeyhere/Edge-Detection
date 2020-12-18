@@ -2,12 +2,11 @@
 2019.2
 Nov  6 2019
 21:57:16
-C:/Users/George/Edge-Detection/greyscale/greyscale.ip_user_files/bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_0_0/sim/greyscale_algorithm_floating_point_0_0.vhd,1608266227,vhdl,,,,greyscale_algorithm_floating_point_0_0,,,,,,,,
-C:/Users/George/Edge-Detection/greyscale/greyscale.ip_user_files/bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_1_0/sim/greyscale_algorithm_floating_point_1_0.vhd,1608266227,vhdl,,,,greyscale_algorithm_floating_point_1_0,,,,,,,,
-C:/Users/George/Edge-Detection/greyscale/greyscale.ip_user_files/bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_2_0/sim/greyscale_algorithm_floating_point_2_0.vhd,1608266227,vhdl,,,,greyscale_algorithm_floating_point_2_0,,,,,,,,
-C:/Users/George/Edge-Detection/greyscale/greyscale.ip_user_files/bd/greyscale_algorithm/ip/greyscale_algorithm_greyscale_input_0_0/sim/greyscale_algorithm_greyscale_input_0_0.v,1608267760,verilog,,C:/Users/George/Edge-Detection/greyscale/greyscale.ip_user_files/bd/greyscale_algorithm/sim/greyscale_algorithm.v,,greyscale_algorithm_greyscale_input_0_0,,,,,,,,
-C:/Users/George/Edge-Detection/greyscale/greyscale.ip_user_files/bd/greyscale_algorithm/sim/greyscale_algorithm.v,1608267552,verilog,,C:/Users/George/Edge-Detection/greyscale/greyscale.srcs/sources_1/new/greyscale_top.v,,greyscale_algorithm,,,,,,,,
-C:/Users/George/Edge-Detection/greyscale/greyscale.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
-C:/Users/George/Edge-Detection/greyscale/greyscale.srcs/sim_1/new/top_tb.v,1608267157,verilog,,,,top_tb,,,,,,,,
-C:/Users/George/Edge-Detection/greyscale/greyscale.srcs/sources_1/new/greyscale_input.v,1608267732,verilog,,C:/Users/George/Edge-Detection/greyscale/greyscale.ip_user_files/bd/greyscale_algorithm/ip/greyscale_algorithm_greyscale_input_0_0/sim/greyscale_algorithm_greyscale_input_0_0.v,,greyscale_input,,,,,,,,
-C:/Users/George/Edge-Detection/greyscale/greyscale.srcs/sources_1/new/greyscale_top.v,1608267366,verilog,,C:/Users/George/Edge-Detection/greyscale/greyscale.srcs/sim_1/new/top_tb.v,,greyscale_top,,,,,,,,
+C:/Users/George/Edge-Detection/greyscale/greyscale.ip_user_files/bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_0_0/sim/greyscale_algorithm_floating_point_0_0.vhd,1608280354,vhdl,,,,greyscale_algorithm_floating_point_0_0,,,,,,,,
+C:/Users/George/Edge-Detection/greyscale/greyscale.ip_user_files/bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_1_0/sim/greyscale_algorithm_floating_point_1_0.vhd,1608280354,vhdl,,,,greyscale_algorithm_floating_point_1_0,,,,,,,,
+C:/Users/George/Edge-Detection/greyscale/greyscale.ip_user_files/bd/greyscale_algorithm/ip/greyscale_algorithm_floating_point_2_0/sim/greyscale_algorithm_floating_point_2_0.vhd,1608283305,vhdl,,,,greyscale_algorithm_floating_point_2_0,,,,,,,,
+C:/Users/George/Edge-Detection/greyscale/greyscale.ip_user_files/bd/greyscale_algorithm/sim/greyscale_algorithm.v,1608283305,verilog,,C:/Users/George/Edge-Detection/greyscale/greyscale.srcs/sources_1/new/greyscale_input.v,,greyscale_algorithm,,,,,,,,
+C:/Users/George/Edge-Detection/greyscale/greyscale.sim/sim_1/behav/xsim/glbl.v,1608280354,verilog,,,,glbl,,,,,,,,
+C:/Users/George/Edge-Detection/greyscale/greyscale.srcs/sim_1/new/top_tb.v,1608283688,verilog,,,,top_tb,,,,,,,,
+C:/Users/George/Edge-Detection/greyscale/greyscale.srcs/sources_1/new/greyscale_input.v,1608283966,verilog,,C:/Users/George/Edge-Detection/greyscale/greyscale.srcs/sources_1/new/greyscale_top.v,,greyscale_input,,,,,,,,
+C:/Users/George/Edge-Detection/greyscale/greyscale.srcs/sources_1/new/greyscale_top.v,1608283122,verilog,,C:/Users/George/Edge-Detection/greyscale/greyscale.srcs/sim_1/new/top_tb.v,,greyscale_top,,,,,,,,

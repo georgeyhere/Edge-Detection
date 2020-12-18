@@ -1,10 +1,9 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto e082d091690f46e5a2daf42d8685816b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_16 -L floating_point_v7_1_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto e082d091690f46e5a2daf42d8685816b --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_16 -L floating_point_v7_1_9 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 's_axis_operation_tready' is not connected on this instance [C:/Users/George/Edge-Detection/greyscale/greyscale.ip_user_files/bd/greyscale_algorithm/sim/greyscale_algorithm.v:97]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -30,6 +29,7 @@ Compiling package ieee.vital_timing
 Compiling package ieee.vital_primitives
 Compiling package unisim.vpkg
 Compiling package xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv_comp
+Compiling module xil_defaultlib.greyscale_input
 Compiling architecture xilinx of entity axi_utils_v2_0_6.axi_slave_2to1 [\axi_slave_2to1(c_a_tdata_width=...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
 Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=26,length=0,fast_in...]
@@ -188,13 +188,7 @@ Compiling architecture rtl of entity floating_point_v7_1_9.flt_fma [\flt_fma(c_x
 Compiling architecture xilinx of entity floating_point_v7_1_9.floating_point_v7_1_9_viv [\floating_point_v7_1_9_viv(c_xde...]
 Compiling architecture xilinx of entity floating_point_v7_1_9.floating_point_v7_1_9 [\floating_point_v7_1_9(c_xdevice...]
 Compiling architecture greyscale_algorithm_floating_point_1_0_arch of entity xil_defaultlib.greyscale_algorithm_floating_point_1_0 [greyscale_algorithm_floating_poi...]
-Compiling architecture xilinx of entity axi_utils_v2_0_6.axi_slave_4to1 [\axi_slave_4to1(c_a_tdata_width=...]
-Compiling architecture rtl of entity floating_point_v7_1_9.flt_fma [\flt_fma(c_xdevicefamily="artix7...]
-Compiling architecture xilinx of entity floating_point_v7_1_9.floating_point_v7_1_9_viv [\floating_point_v7_1_9_viv(c_xde...]
-Compiling architecture xilinx of entity floating_point_v7_1_9.floating_point_v7_1_9 [\floating_point_v7_1_9(c_xdevice...]
 Compiling architecture greyscale_algorithm_floating_point_2_0_arch of entity xil_defaultlib.greyscale_algorithm_floating_point_2_0 [greyscale_algorithm_floating_poi...]
-Compiling module xil_defaultlib.greyscale_input
-Compiling module xil_defaultlib.greyscale_algorithm_greyscale_in...
 Compiling module xil_defaultlib.greyscale_algorithm
 Compiling module xil_defaultlib.greyscale_top
 Compiling module xil_defaultlib.top_tb

@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Thu Dec 17 21:02:40 2020
+//Date        : Fri Dec 18 01:38:44 2020
 //Host        : DESKTOP-MB5IJCE running 64-bit major release  (build 9200)
 //Command     : generate_target greyscale_algorithm_wrapper.bd
 //Design      : greyscale_algorithm_wrapper
@@ -10,39 +10,67 @@
 `timescale 1 ps / 1 ps
 
 module greyscale_algorithm_wrapper
-   (blue_0,
-    byte_convert_done_0,
-    clk_0,
-    green_0,
-    m_axis_result_tdata_0,
-    m_axis_result_tready_0,
-    m_axis_result_tvalid,
-    red_0);
-  input [7:0]blue_0;
-  input byte_convert_done_0;
+   (M_AXIS_RESULT_0_tdata,
+    M_AXIS_RESULT_0_tvalid,
+    S_AXIS_A_0_tdata,
+    S_AXIS_A_0_tvalid,
+    S_AXIS_A_1_tdata,
+    S_AXIS_A_1_tvalid,
+    S_AXIS_A_2_tdata,
+    S_AXIS_A_2_tvalid,
+    S_AXIS_B_0_tdata,
+    S_AXIS_B_0_tvalid,
+    S_AXIS_B_1_tdata,
+    S_AXIS_B_1_tvalid,
+    S_AXIS_B_2_tdata,
+    S_AXIS_B_2_tvalid,
+    clk_0);
+  output [31:0]M_AXIS_RESULT_0_tdata;
+  output M_AXIS_RESULT_0_tvalid;
+  input [31:0]S_AXIS_A_0_tdata;
+  input S_AXIS_A_0_tvalid;
+  input [31:0]S_AXIS_A_1_tdata;
+  input S_AXIS_A_1_tvalid;
+  input [31:0]S_AXIS_A_2_tdata;
+  input S_AXIS_A_2_tvalid;
+  input [31:0]S_AXIS_B_0_tdata;
+  input S_AXIS_B_0_tvalid;
+  input [31:0]S_AXIS_B_1_tdata;
+  input S_AXIS_B_1_tvalid;
+  input [31:0]S_AXIS_B_2_tdata;
+  input S_AXIS_B_2_tvalid;
   input clk_0;
-  input [7:0]green_0;
-  output [31:0]m_axis_result_tdata_0;
-  input m_axis_result_tready_0;
-  output m_axis_result_tvalid;
-  input [7:0]red_0;
 
-  wire [7:0]blue_0;
-  wire byte_convert_done_0;
+  wire [31:0]M_AXIS_RESULT_0_tdata;
+  wire M_AXIS_RESULT_0_tvalid;
+  wire [31:0]S_AXIS_A_0_tdata;
+  wire S_AXIS_A_0_tvalid;
+  wire [31:0]S_AXIS_A_1_tdata;
+  wire S_AXIS_A_1_tvalid;
+  wire [31:0]S_AXIS_A_2_tdata;
+  wire S_AXIS_A_2_tvalid;
+  wire [31:0]S_AXIS_B_0_tdata;
+  wire S_AXIS_B_0_tvalid;
+  wire [31:0]S_AXIS_B_1_tdata;
+  wire S_AXIS_B_1_tvalid;
+  wire [31:0]S_AXIS_B_2_tdata;
+  wire S_AXIS_B_2_tvalid;
   wire clk_0;
-  wire [7:0]green_0;
-  wire [31:0]m_axis_result_tdata_0;
-  wire m_axis_result_tready_0;
-  wire m_axis_result_tvalid;
-  wire [7:0]red_0;
 
   greyscale_algorithm greyscale_algorithm_i
-       (.blue_0(blue_0),
-        .byte_convert_done_0(byte_convert_done_0),
-        .clk_0(clk_0),
-        .green_0(green_0),
-        .m_axis_result_tdata_0(m_axis_result_tdata_0),
-        .m_axis_result_tready_0(m_axis_result_tready_0),
-        .m_axis_result_tvalid(m_axis_result_tvalid),
-        .red_0(red_0));
+       (.M_AXIS_RESULT_0_tdata(M_AXIS_RESULT_0_tdata),
+        .M_AXIS_RESULT_0_tvalid(M_AXIS_RESULT_0_tvalid),
+        .S_AXIS_A_0_tdata(S_AXIS_A_0_tdata),
+        .S_AXIS_A_0_tvalid(S_AXIS_A_0_tvalid),
+        .S_AXIS_A_1_tdata(S_AXIS_A_1_tdata),
+        .S_AXIS_A_1_tvalid(S_AXIS_A_1_tvalid),
+        .S_AXIS_A_2_tdata(S_AXIS_A_2_tdata),
+        .S_AXIS_A_2_tvalid(S_AXIS_A_2_tvalid),
+        .S_AXIS_B_0_tdata(S_AXIS_B_0_tdata),
+        .S_AXIS_B_0_tvalid(S_AXIS_B_0_tvalid),
+        .S_AXIS_B_1_tdata(S_AXIS_B_1_tdata),
+        .S_AXIS_B_1_tvalid(S_AXIS_B_1_tvalid),
+        .S_AXIS_B_2_tdata(S_AXIS_B_2_tdata),
+        .S_AXIS_B_2_tvalid(S_AXIS_B_2_tvalid),
+        .clk_0(clk_0));
 endmodule

@@ -92,7 +92,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TREADY</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_A.HAS_TREADY">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_A.HAS_TREADY">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -396,7 +396,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TREADY</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_B.HAS_TREADY">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_B.HAS_TREADY">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -571,7 +571,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TREADY</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C.HAS_TREADY">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_C.HAS_TREADY">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -759,7 +759,7 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>HAS_TREADY</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_RESULT.HAS_TREADY">1</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_RESULT.HAS_TREADY">0</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1066,11 +1066,11 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Dec 18 04:37:07 UTC 2020</spirit:value>
+            <spirit:value>Fri Dec 18 08:32:34 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0a4cdfe8</spirit:value>
+            <spirit:value>9:6e965617</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1084,11 +1084,11 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Dec 18 04:37:07 UTC 2020</spirit:value>
+            <spirit:value>Fri Dec 18 09:38:44 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0a4cdfe8</spirit:value>
+            <spirit:value>9:6e965617</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1104,11 +1104,11 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Dec 18 04:37:07 UTC 2020</spirit:value>
+            <spirit:value>Fri Dec 18 09:38:44 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0a4cdfe8</spirit:value>
+            <spirit:value>9:6e965617</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1147,11 +1147,11 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Dec 18 04:37:07 UTC 2020</spirit:value>
+            <spirit:value>Fri Dec 18 08:32:34 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e7f879d9</spirit:value>
+            <spirit:value>9:8204db39</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1167,11 +1167,11 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Dec 18 04:37:07 UTC 2020</spirit:value>
+            <spirit:value>Fri Dec 18 09:38:44 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e7f879d9</spirit:value>
+            <spirit:value>9:8204db39</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1280,7 +1280,7 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_a_tready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 4 or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 3 and spirit:decode(id(&apos;MODELPARAM_VALUE.C_RATE&apos;)) > 1))">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_a_tready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 4 or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 3 and spirit:decode(id(&apos;MODELPARAM_VALUE.C_RATE&apos;)) > 1))">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -1396,7 +1396,7 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_b_tready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_B&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 4 or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 3 and spirit:decode(id(&apos;MODELPARAM_VALUE.C_RATE&apos;)) > 1)))">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_b_tready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_B&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 4 or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 3 and spirit:decode(id(&apos;MODELPARAM_VALUE.C_RATE&apos;)) > 1)))">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -1519,7 +1519,7 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c_tready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_C&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 4 or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 3 and spirit:decode(id(&apos;MODELPARAM_VALUE.C_RATE&apos;)) > 1)))">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.s_axis_c_tready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_C&apos;)) = 1 and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 2 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 4 or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 3 and spirit:decode(id(&apos;MODELPARAM_VALUE.C_RATE&apos;)) > 1)))">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -1758,7 +1758,7 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_result_tready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 2)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.m_axis_result_tready" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 1 or spirit:decode(id(&apos;MODELPARAM_VALUE.C_THROTTLE_SCHEME&apos;)) = 2)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -1973,7 +1973,7 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_LATENCY</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_LATENCY">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_LATENCY">16</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_OPTIMIZATION</spirit:name>
@@ -2037,7 +2037,7 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_THROTTLE_SCHEME</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_THROTTLE_SCHEME">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_THROTTLE_SCHEME">3</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_HAS_A_TUSER</spirit:name>
@@ -2576,7 +2576,7 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Flow_Control</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Flow_Control" spirit:choiceRef="choice_list_4f849371" spirit:order="17.1">Blocking</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Flow_Control" spirit:choiceRef="choice_list_4f849371" spirit:order="17.1">NonBlocking</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Axi_Optimize_Goal</spirit:name>
@@ -2584,7 +2584,7 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Has_RESULT_TREADY</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.Has_RESULT_TREADY" spirit:order="19">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.Has_RESULT_TREADY" spirit:order="19">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Maximum_Latency</spirit:name>
@@ -2592,7 +2592,7 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_Latency</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_Latency" spirit:order="21" spirit:minimum="1" spirit:maximum="17" spirit:rangeType="long">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_Latency" spirit:order="21" spirit:minimum="0" spirit:maximum="16" spirit:rangeType="long">16</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_Rate</spirit:name>
@@ -2709,32 +2709,32 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.FREQ_HZ" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.HAS_TKEEP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.HAS_TLAST" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.HAS_TREADY" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.HAS_TLAST" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.HAS_TREADY" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.HAS_TSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.LAYERED_METADATA" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.LAYERED_METADATA" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.PHASE" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.TDATA_NUM_BYTES" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.TDATA_NUM_BYTES" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.TDEST_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.TUSER_WIDTH" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_A.TUSER_WIDTH" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.FREQ_HZ" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.HAS_TKEEP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.HAS_TLAST" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.HAS_TREADY" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.HAS_TLAST" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.HAS_TREADY" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.HAS_TSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.LAYERED_METADATA" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.LAYERED_METADATA" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.PHASE" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.TDATA_NUM_BYTES" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.TDATA_NUM_BYTES" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.TDEST_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.TUSER_WIDTH" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_B.TUSER_WIDTH" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C.FREQ_HZ" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C.HAS_TKEEP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C.HAS_TLAST" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C.HAS_TREADY" xilinx:valueSource="auto_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C.HAS_TREADY" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C.HAS_TSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C.LAYERED_METADATA" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_C.PHASE" xilinx:valuePermission="bd"/>
@@ -2766,6 +2766,8 @@ value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_b
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_Result_Exponent_Width" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_Result_Fraction_Width" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_TUSER_Width" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Flow_Control" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Has_RESULT_TREADY" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Maximum_Latency" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.OPERATION_TUSER_Width" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Operation_Type" xilinx:valueSource="user"/>
