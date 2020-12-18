@@ -89,7 +89,7 @@ always@(posedge clk) begin
             A1_green <= 0;
             A2_blue <= 0;
             
-            fsm_state <= (byte_convert_done);//if byte_convert has a new byte, assign outputs
+            fsm_state <= (byte_convert_done)? s1_assign : s0_idle;//if byte_convert has a new byte, assign outputs
         end
         
         s1_assign: begin

@@ -170,6 +170,7 @@ proc create_root_design { parentCell } {
   set green_0 [ create_bd_port -dir I -from 7 -to 0 green_0 ]
   set m_axis_result_tdata_0 [ create_bd_port -dir O -from 31 -to 0 m_axis_result_tdata_0 ]
   set m_axis_result_tready_0 [ create_bd_port -dir I m_axis_result_tready_0 ]
+  set m_axis_result_tvalid [ create_bd_port -dir O m_axis_result_tvalid ]
   set red_0 [ create_bd_port -dir I -from 7 -to 0 red_0 ]
 
   # Create instance: floating_point_0, and set properties
@@ -236,7 +237,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net floating_point_1_s_axis_a_tready [get_bd_pins floating_point_1/s_axis_a_tready] [get_bd_pins greyscale_input_0/A1_ready]
   connect_bd_net -net floating_point_1_s_axis_b_tready [get_bd_pins floating_point_1/s_axis_b_tready] [get_bd_pins greyscale_input_0/B1_ready]
   connect_bd_net -net floating_point_2_m_axis_result_tdata [get_bd_ports m_axis_result_tdata_0] [get_bd_pins floating_point_2/m_axis_result_tdata]
-  connect_bd_net -net floating_point_2_m_axis_result_tvalid [get_bd_pins floating_point_2/m_axis_result_tvalid] [get_bd_pins greyscale_input_0/m_axis_result_tvalid_0]
+  connect_bd_net -net floating_point_2_m_axis_result_tvalid [get_bd_ports m_axis_result_tvalid] [get_bd_pins floating_point_2/m_axis_result_tvalid] [get_bd_pins greyscale_input_0/m_axis_result_tvalid_0]
   connect_bd_net -net floating_point_2_s_axis_a_tready [get_bd_pins floating_point_2/s_axis_a_tready] [get_bd_pins greyscale_input_0/A2_ready]
   connect_bd_net -net floating_point_2_s_axis_b_tready [get_bd_pins floating_point_2/s_axis_b_tready] [get_bd_pins greyscale_input_0/B2_ready]
   connect_bd_net -net green_0_1 [get_bd_ports green_0] [get_bd_pins greyscale_input_0/green]

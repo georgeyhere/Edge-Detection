@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="greyscale_algorithm" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1608266228"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1608266228"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1608266228"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1608266228"/>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1608267760"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1608267760"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1608267760"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1608267760"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\greyscale_algorithm_floating_point_0_0\greyscale_algorithm_floating_point_0_0.xci" Type="IP">
         <Instance HierarchyPath="floating_point_0"/>

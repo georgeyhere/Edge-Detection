@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../greyscale.srcs/sources_1/new/greyscale_input.v" \
+"../../../../greyscale.ip_user_files/bd/greyscale_algorithm/ip/greyscale_algorithm_greyscale_input_0_0/sim/greyscale_algorithm_greyscale_input_0_0.v" \
+"../../../../greyscale.ip_user_files/bd/greyscale_algorithm/sim/greyscale_algorithm.v" \
+"../../../../greyscale.srcs/sources_1/new/greyscale_top.v" \
+"../../../../greyscale.srcs/sim_1/new/top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

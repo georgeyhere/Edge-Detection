@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Thu Dec 17 20:37:07 2020
+//Date        : Thu Dec 17 21:02:40 2020
 //Host        : DESKTOP-MB5IJCE running 64-bit major release  (build 9200)
 //Command     : generate_target greyscale_algorithm.bd
 //Design      : greyscale_algorithm
@@ -17,6 +17,7 @@ module greyscale_algorithm
     green_0,
     m_axis_result_tdata_0,
     m_axis_result_tready_0,
+    m_axis_result_tvalid,
     red_0);
   input [7:0]blue_0;
   input byte_convert_done_0;
@@ -24,6 +25,7 @@ module greyscale_algorithm
   input [7:0]green_0;
   output [31:0]m_axis_result_tdata_0;
   input m_axis_result_tready_0;
+  output m_axis_result_tvalid;
   input [7:0]red_0;
 
   wire [7:0]blue_0_1;
@@ -65,6 +67,7 @@ module greyscale_algorithm
   assign green_0_1 = green_0[7:0];
   assign m_axis_result_tdata_0[31:0] = floating_point_2_m_axis_result_tdata;
   assign m_axis_result_tready_0_1 = m_axis_result_tready_0;
+  assign m_axis_result_tvalid = floating_point_2_m_axis_result_tvalid;
   assign red_0_1 = red_0[7:0];
   greyscale_algorithm_floating_point_0_0 floating_point_0
        (.aclk(clk_0_1),

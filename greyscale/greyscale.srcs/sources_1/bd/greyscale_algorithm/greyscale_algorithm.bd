@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xB68BE249F19BF1E0",
+      "boundary_crc": "0x9F402AE92153E76C",
       "device": "xc7a50tcsg324-1",
       "name": "greyscale_algorithm",
       "synth_flow_mode": "None",
@@ -10,9 +10,9 @@
     },
     "design_tree": {
       "floating_point_0": "",
-      "greyscale_input_0": "",
       "floating_point_1": "",
-      "floating_point_2": ""
+      "floating_point_2": "",
+      "greyscale_input_0": ""
     },
     "ports": {
       "clk_0": {
@@ -62,6 +62,9 @@
         "direction": "O",
         "left": "31",
         "right": "0"
+      },
+      "m_axis_result_tvalid": {
+        "direction": "O"
       }
     },
     "components": {
@@ -89,6 +92,69 @@
           },
           "Operation_Type": {
             "value": "Multiply"
+          },
+          "Result_Precision_Type": {
+            "value": "Single"
+          }
+        }
+      },
+      "floating_point_1": {
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "xci_name": "greyscale_algorithm_floating_point_1_0",
+        "parameters": {
+          "Add_Sub_Value": {
+            "value": "Add"
+          },
+          "C_Latency": {
+            "value": "1"
+          },
+          "C_Mult_Usage": {
+            "value": "Medium_Usage"
+          },
+          "C_Rate": {
+            "value": "1"
+          },
+          "C_Result_Exponent_Width": {
+            "value": "8"
+          },
+          "C_Result_Fraction_Width": {
+            "value": "24"
+          },
+          "Maximum_Latency": {
+            "value": "false"
+          },
+          "Operation_Type": {
+            "value": "FMA"
+          },
+          "Result_Precision_Type": {
+            "value": "Single"
+          }
+        }
+      },
+      "floating_point_2": {
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "xci_name": "greyscale_algorithm_floating_point_2_0",
+        "parameters": {
+          "C_Latency": {
+            "value": "1"
+          },
+          "C_Mult_Usage": {
+            "value": "Medium_Usage"
+          },
+          "C_Rate": {
+            "value": "1"
+          },
+          "C_Result_Exponent_Width": {
+            "value": "8"
+          },
+          "C_Result_Fraction_Width": {
+            "value": "24"
+          },
+          "Maximum_Latency": {
+            "value": "false"
+          },
+          "Operation_Type": {
+            "value": "FMA"
           },
           "Result_Precision_Type": {
             "value": "Single"
@@ -202,69 +268,6 @@
             "right": "0"
           }
         }
-      },
-      "floating_point_1": {
-        "vlnv": "xilinx.com:ip:floating_point:7.1",
-        "xci_name": "greyscale_algorithm_floating_point_1_0",
-        "parameters": {
-          "Add_Sub_Value": {
-            "value": "Add"
-          },
-          "C_Latency": {
-            "value": "1"
-          },
-          "C_Mult_Usage": {
-            "value": "Medium_Usage"
-          },
-          "C_Rate": {
-            "value": "1"
-          },
-          "C_Result_Exponent_Width": {
-            "value": "8"
-          },
-          "C_Result_Fraction_Width": {
-            "value": "24"
-          },
-          "Maximum_Latency": {
-            "value": "false"
-          },
-          "Operation_Type": {
-            "value": "FMA"
-          },
-          "Result_Precision_Type": {
-            "value": "Single"
-          }
-        }
-      },
-      "floating_point_2": {
-        "vlnv": "xilinx.com:ip:floating_point:7.1",
-        "xci_name": "greyscale_algorithm_floating_point_2_0",
-        "parameters": {
-          "C_Latency": {
-            "value": "1"
-          },
-          "C_Mult_Usage": {
-            "value": "Medium_Usage"
-          },
-          "C_Rate": {
-            "value": "1"
-          },
-          "C_Result_Exponent_Width": {
-            "value": "8"
-          },
-          "C_Result_Fraction_Width": {
-            "value": "24"
-          },
-          "Maximum_Latency": {
-            "value": "false"
-          },
-          "Operation_Type": {
-            "value": "FMA"
-          },
-          "Result_Precision_Type": {
-            "value": "Single"
-          }
-        }
       }
     },
     "interface_nets": {
@@ -285,10 +288,10 @@
       "clk_0_1": {
         "ports": [
           "clk_0",
-          "greyscale_input_0/clk",
           "floating_point_0/aclk",
           "floating_point_2/aclk",
-          "floating_point_1/aclk"
+          "floating_point_1/aclk",
+          "greyscale_input_0/clk"
         ]
       },
       "greyscale_input_0_A0_red": {
@@ -426,6 +429,7 @@
       "floating_point_2_m_axis_result_tvalid": {
         "ports": [
           "floating_point_2/m_axis_result_tvalid",
+          "m_axis_result_tvalid",
           "greyscale_input_0/m_axis_result_tvalid_0"
         ]
       },
