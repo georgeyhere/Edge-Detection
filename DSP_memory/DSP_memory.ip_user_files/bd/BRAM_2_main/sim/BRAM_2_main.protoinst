@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"BRAM_2_main": {
+			"proto_instances": {
+			}
+		}
+	}
+}
